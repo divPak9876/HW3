@@ -1,0 +1,144 @@
+<!--Divya Pakalapati-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<!--import css file -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheesecake Order Form</title>
+    <link rel="stylesheet" href="./stylesheets/cakecss.css">
+    <script 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/> 
+    </script>
+    <style>
+        /* Dropdown Styling */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 150px;
+            max-height: 150px;
+            overflow-y: auto;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .widget {
+            font-weight: bold;
+            color: blue;
+            cursor: pointer;
+        }
+        #orderConfirmation {
+            display: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!--set up heading and main image-->
+<h1>Cheesecake Order Form</h1>
+<img src="https://images.saymedia-content.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk3MDAwMDA0MzQ5OTk0NjM2/10-of-the-highest-calorie-desserts-you-can-eat.jpg"  
+     width="200" height="200" alt="Cheesecake">
+
+<!--add the drop down menu and radio buttons to be aligned horizontally-->
+<!--add the notes and order button-->
+<form>
+    <p>Quantity Topping</p>
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <select id="numbers" name="numbers" style="background-color: lightgray;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+
+        <div>
+            <p style="margin: 0;">
+                <input type="radio" id="plain" name="flavor" value="plain" style="width: 15px; height: 15px;">
+                <label for="plain">Plain</label>
+            </p>
+            <p style="margin: 0;">
+                <input type="radio" id="cherry" name="flavor" value="cherry" style="width: 15px; height: 15px;">
+                <label for="cherry">Cherry</label>
+            </p>
+            <p style="margin: 0;">
+                <input type="radio" id="chocolate" name="flavor" value="chocolate" style="width: 15px; height: 15px;">
+                <label for="chocolate">Chocolate</label>
+            </p>
+        </div>
+    </div>
+
+    <label for="notes">Notes:</label><br>
+    <textarea id="special-instructions" name="instructions" rows="4" cols="50" 
+              placeholder="Enter special instructions here."></textarea><br>
+
+    <input type="submit" value="Order" style="background-color: lightgray;">
+</form>
+
+<!--class that holds the total orders -->
+<div class="total-orders">
+    <h3>
+        Orders for <span class="dropdown">
+            <span class="widget">Jan</span>
+            <div class="dropdown-content">
+                <a class="month-option" data-month="Jan">Jan</a>
+                <a class="month-option" data-month="Feb">Feb</a>
+                <a class="month-option" data-month="Mar">Mar</a>
+                <a class="month-option" data-month="Apr">Apr</a>
+                <a class="month-option" data-month="May">May</a>
+                <a class="month-option" data-month="Jun">Jun</a>
+                <a class="month-option" data-month="Jul">Jul</a>
+                <a class="month-option" data-month="Aug">Aug</a>
+                <a class="month-option" data-month="Sep">Sep</a>
+                <a class="month-option" data-month="Oct">Oct</a>
+                <a class="month-option" data-month="Nov">Nov</a>
+                <a class="month-option" data-month="Dec">Dec</a>
+            </div>
+        </span>
+    </h3>
+    <ul>
+        <li>11 cherry</li>
+        <li>17 chocolate</li>
+        <li>31 plain</li>
+    </ul>
+</div>
+<script src="./javascripts/form.js"></script>
+</body>
+</html>
+
+<!--References-->
+<!--ChatGPT: Used to understand how to formulate code for html, css and js-->
+<!--W3Schools: Used toundertsand how to formulate code and as a starter cofe for certain fucntions->
+<!--References-->
